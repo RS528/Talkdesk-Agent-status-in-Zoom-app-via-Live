@@ -1,0 +1,7 @@
+.env*
+cache/*
+!cache/.gitkeep
+!cache/.htaccess
+*.log
+*.zip
+token.json

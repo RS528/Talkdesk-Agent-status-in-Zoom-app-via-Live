@@ -1,0 +1,5 @@
+# Standaard: NIETS in deze map is bereikbaar via het web
+# (.env, src/, cache/, logo/ ...). Alleen public/ heeft een eigen .htaccess
+# die toegang geeft. Vereist AllowOverride AuthConfig/Limit (+ Options) in de vhost.
+Options -Indexes
+Require all denied
