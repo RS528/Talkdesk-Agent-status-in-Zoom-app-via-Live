@@ -1,0 +1,14 @@
+Options -Indexes
+
+# Alleen deze map is publiek.
+Require all granted
+
+# Nooit dotfiles of backup/log-bestanden serveren, ook niet per ongeluk.
+<FilesMatch "^\.|\.(env|log|lock|bak|old|orig|swp|zip|sql)$">
+    Require all denied
+</FilesMatch>
+
+# Alleen PHP-bestanden in deze map uitvoeren die we verwachten.
+<IfModule mod_headers.c>
+    Header always unset X-Powered-By
+</IfModule>
